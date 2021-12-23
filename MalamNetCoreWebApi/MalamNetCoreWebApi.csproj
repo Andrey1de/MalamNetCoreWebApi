@@ -24,28 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\Angular\3rdpartylicenses.txt" />
-    <Content Remove="wwwroot\Angular\favicon.ico" />
-    <Content Remove="wwwroot\Angular\index.html" />
-    <Content Remove="wwwroot\Angular\main.6b56296a567f7e87.js" />
-    <Content Remove="wwwroot\Angular\polyfills.7c00d9a95fdaadbc.js" />
-    <Content Remove="wwwroot\Angular\runtime.c453d43c295cfa67.js" />
-    <Content Remove="wwwroot\Angular\styles.ef46db3751d8e999.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Angular\angular.json" />
-    <None Include="Angular\package.json" />
-    <Content Include="Angular\src\app\app.component.css" />
-    <Content Include="Angular\src\app\app.component.html" />
-    <Content Include="Angular\src\favicon.ico" />
-    <Content Include="Angular\src\index.html" />
-    <Content Include="Angular\src\styles.css" />
-    <None Include="Angular\tsconfig.app.json" />
-    <None Include="Angular\tsconfig.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Google.Apis.Books.v1" Version="1.55.0.2231" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
@@ -53,48 +31,7 @@
 
   <ItemGroup>
     <Folder Include="Helpers\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Angular\.browserslistrc" />
-    <None Include="Angular\.editorconfig" />
-    <None Include="Angular\.gitignore" />
-    <None Include="Angular\karma.conf.js" />
-    <None Include="Angular\README.md" />
-    <None Include="Angular\src\assets\.gitkeep" />
-    <None Include="wwwroot\Angular\3rdpartylicenses.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="wwwroot\Angular\favicon.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="wwwroot\Angular\index.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="wwwroot\Angular\main.6b56296a567f7e87.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="wwwroot\Angular\polyfills.7c00d9a95fdaadbc.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="wwwroot\Angular\runtime.c453d43c295cfa67.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="wwwroot\Angular\styles.ef46db3751d8e999.css">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <TypeScriptCompile Include="Angular\src\app\app-routing.module.ts" />
-    <TypeScriptCompile Include="Angular\src\app\app.component.spec.ts" />
-    <TypeScriptCompile Include="Angular\src\app\app.component.ts" />
-    <TypeScriptCompile Include="Angular\src\app\app.module.ts" />
-    <TypeScriptCompile Include="Angular\src\environments\environment.prod.ts" />
-    <TypeScriptCompile Include="Angular\src\environments\environment.ts" />
-    <TypeScriptCompile Include="Angular\src\main.ts" />
-    <TypeScriptCompile Include="Angular\src\polyfills.ts" />
-    <TypeScriptCompile Include="Angular\src\test.ts" />
+    <Folder Include="wwwroot\Angular\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -108,5 +45,21 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
+    <TypeScriptModuleKind />
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
 
 </Project>
